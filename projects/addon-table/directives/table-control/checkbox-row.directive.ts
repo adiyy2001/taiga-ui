@@ -42,9 +42,6 @@ export class TuiCheckboxRowDirective<T> implements OnInit, OnDestroy {
 
     public ngOnDestroy(): void {
         this.parent.process(this);
-        this.parent.onChange(
-            this.parent.value().filter((item) => item !== this.tuiCheckboxRow()),
-        );
     }
 
     protected onChange(): void {
